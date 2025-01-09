@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+
+# React Native
+# Uncomment if you're using React Native
+# .expo/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.idea/
+.vscode/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
