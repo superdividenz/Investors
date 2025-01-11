@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 pt-20">
       <main className="container mx-auto p-8">
-        <h2 className="text-4xl font-bold mb-8 text-blue-600 text-center">
+        <h2 className="text-4xl font-bold mb-8 text-black text-center">
           About St.Louis REInvestors
         </h2>
 
@@ -27,7 +27,7 @@ const About = () => {
               key={index}
               className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
             >
-              <h3 className="text-xl font-semibold mb-4 text-blue-600">
+              <h3 className="text-xl font-semibold mb-4 text-black">
                 {section.title}
               </h3>
               <p className="text-gray-700">{section.content}</p>
