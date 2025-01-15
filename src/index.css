@@ -32,3 +32,16 @@
 .thinking-dots span:nth-child(3) {
   animation-delay: 0.4s;
 }
+
+.hover-effect {
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease,
+    border 0.3s ease;
+  display: inline-block; /* Ensures the border wraps nicely around the text */
+  padding: 5px 10px; /* Adds some padding to make the border look better */
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}

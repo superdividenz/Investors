@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Chat from './Chat';
+import RealEstateDataPage from "./RealEstateDataPage"; // Import the new page
 
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false); // State to control sidebar visibility
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/real-estate-data" element={<RealEstateDataPage />} />
         <Route path="/chat" element={<Chat />} />
       </Routes>
       <Chat isChatOpen={isChatOpen} toggleChat={toggleChat} /> {/* Pass state and toggle function to Chat */}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChatBubbleOvalLeftIcon, Bars3Icon } from "@heroicons/react/24/outline";
-import logo from "./img/LOGO.png"; // Import the logo image
+import { Link } from "react-router-dom"; // Import Link for routing
 
 const Header = ({ toggleChat }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,14 +12,13 @@ const Header = ({ toggleChat }) => {
   return (
     <header className="bg-black text-white p-4 shadow-lg fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
+        {/* Header Text */}
         <div className="flex items-center space-x-4">
-          {/* Logo */}
-          <img
-            src={logo}
-            alt="St. Louis REInvestors Logo"
-            className="h-12 w-auto md:h-16" // Responsive logo size
-          />
+          <h1 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+            STL RE-Investor
+          </h1>
         </div>
+
         {/* Hamburger Menu (Mobile Only) */}
         <button
           onClick={toggleMenu}
@@ -27,32 +26,41 @@ const Header = ({ toggleChat }) => {
         >
           <Bars3Icon className="h-6 w-6 hover:text-gray-300" />
         </button>
+
         {/* Navigation (Desktop) */}
         <nav className="hidden md:block">
           <ul className="flex space-x-6 items-center">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="hover:text-gray-300 text-lg font-medium transition-all duration-200 hover:scale-105 active:scale-120"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className="hover:text-gray-300 text-lg font-medium transition-all duration-200 hover:scale-105 active:scale-120"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="hover:text-gray-300 text-lg font-medium transition-all duration-200 hover:scale-105 active:scale-120"
               >
                 Contact
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/real-estate-data"
+                className="hover:text-gray-300 text-lg font-medium transition-all duration-200 hover:scale-105 active:scale-120"
+              >
+                Data
+              </Link>
             </li>
             <li>
               <button
@@ -64,33 +72,42 @@ const Header = ({ toggleChat }) => {
             </li>
           </ul>
         </nav>
+
         {/* Mobile Menu (Dropdown) */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-16 right-4 bg-black rounded-lg shadow-lg p-4">
             <ul className="space-y-4">
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="hover:text-gray-300 text-lg font-medium transition-all duration-200 hover:scale-105 active:scale-120"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className="hover:text-gray-300 text-lg font-medium transition-all duration-200 hover:scale-105 active:scale-120"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="hover:text-gray-300 text-lg font-medium transition-all duration-200 hover:scale-105 active:scale-120"
                 >
                   Contact
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/real-estate-data"
+                  className="hover:text-gray-300 text-lg font-medium transition-all duration-200 hover:scale-105 active:scale-120"
+                >
+                  Data
+                </Link>
               </li>
             </ul>
           </div>

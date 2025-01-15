@@ -10,10 +10,10 @@ const Home = () => {
       }}
     >
       <div className="min-h-screen bg-black bg-opacity-60 pt-12 md:pt-20">
-        <main className="container mx-auto p-4">
+        <main className="container mt-8 mx-auto p-4">
           {/* Hero Section */}
           <div className="text-center text-white mb-8 md:mb-16">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 hover-effect">
               St. Louis REInvestors
             </h1>
             <p className="text-lg md:text-xl mb-8">
